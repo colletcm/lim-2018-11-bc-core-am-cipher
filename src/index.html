@@ -6,7 +6,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <h1> Bienvenido a ENCRYPT FRIEND </h1>
+    <p>esta es la app dónde podrás mensajear secretamente con tus amigos,
+    despues de todo... ¿Quién mejor que ellos para entenderte?</p>
+    <p>Esto funciona así:</p>
+    <ul>
+      <li>Elige un número que se convertirá en la clave que transformará tu mensaje</li>
+      <li>Escribe tu mensaje especial</li>
+      <li>Dale click al botón de cifrar</li>
+      <li>comparte el mensaje y el codigo clave con tu mejor amigo</li>
+      <li>Dandole click a descifrar podrá divertirse devalando el mensaje</li>
+    </ul>
+    <form>
+      <div>
+        <label for="patron"><strong>Escribe tu clave de cifrado:</strong></label>
+        <input type="number" id="patron">
+    </div>
+    <div>
+      <label for="mensaje"><big><strong>Mensaje:</strong><big><textarea id="mensajito" rows="4" cols="40"></textarea></label>
+      <button>cifrar</button>
+      <button>descifrar</button>
+    </div>
+    </form>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

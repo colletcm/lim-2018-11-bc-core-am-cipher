@@ -1,17 +1,30 @@
 window.cipher = {
-let mensaje = document.getElementById('mensajito').value;
-    mensaje = mensaje.toUpperCase();
-let clave = document.getElementById('patron').value;
-    clave = parseInt("clave");
+  encode: function(mensaje,clave){
 let resultado = "";
-let frase = "";
-  for(i=0; i<mensaje.length; i++){
-    resultado = charCodeAt(i)
+let mensajeFinal = "";
+  for(let i=0; i<mensaje.length; i++){
+    resultado = mensaje.charCodeAt(i);
     if(resultado===32){
-      resultado===32
+      mensajeFinal+=" ";
     }else{
-      resultado + clave = resultado
-    }
+      mensajeFinal += String.fromCharCode((resultado-65+clave)%26+65);
   }
- resultado = String.fromCharCode("resultado")
+}
+ return mensajeFinal;
+},
+//ahora el 2do metodo de el Objeto cipher
+ decode: function(mensaje,clave){
+   let resultado = "";
+   let mensajeFinal = "";
+      for(let i=0; i<mensaje.length; i++){
+        resultado = mensaje.charCodeAt(i);
+      if(resultado===32){
+        mensajeFinal = mensajeFinal+" ";
+      }else{
+        mensajeFinal += String.fromCharCode((resultado-90-clave)%26+90);
+       //console.log(mensajeFinal);
+      }
+      }
+   return mensajeFinal;
+ }
 }

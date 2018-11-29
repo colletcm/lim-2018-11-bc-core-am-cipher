@@ -18,14 +18,16 @@
       <li>Dandole click a descifrar podrá divertirse devalando el mensaje</li>
     </ul>
     <form>
-      <div>
-        <label for="patron"><strong>Escribe tu clave de cifrado:</strong></label>
-        <input type="number" id="patron">
-    </div>
     <div>
-      <label for="mensaje"><big><strong>Mensaje:</strong><big><textarea id="mensajito" rows="4" cols="40"></textarea></label>
-      <button>cifrar</button>
-      <button>descifrar</button>
+        <label for="patron"><strong>Escribe tu clave de cifrado:</strong></label>
+        <input type="text" id="patron">
+    </div>
+
+    <div>
+      <label><strong>Mensaje Original:</strong></label><textarea id="mensajito1" rows="4" cols="40"></textarea>
+      <button type= "button" id= "encriptar">cifrar</button>
+      <label><strong>Mensaje Cifrado:</strong></label><textarea id="mensajito2" rows="4" cols="40"></textarea>
+      <button type= "button" id= "desencriptar">descifrar</button>
     </div>
     </form>
     <script src="cipher.js"></script>

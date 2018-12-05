@@ -3,9 +3,9 @@ const mensaje1 = document.getElementById("mensajito1");
 const botonCifrado = document.getElementById("encriptar");
 const mensaje2 = document.getElementById("mensajito2");
 const botonRespuesta = document.getElementById("desencriptar");
-botonCifrado.addEventListener("click", function () {
+botonCifrado.addEventListener("click", () => {
   mensaje2.value = cipher.encode(parseInt(offset.value), (mensaje1.value).toUpperCase());
 })
-botonRespuesta.addEventListener("click", function () {
+botonRespuesta.addEventListener("click", () => {
   mensaje1.value = cipher.decode(parseInt(offset.value), (mensaje2.value).toUpperCase());
 })

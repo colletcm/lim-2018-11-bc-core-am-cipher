@@ -1,5 +1,5 @@
 window.cipher = {
-  encode: function (offset, text) {
+  encode: (offset, text) => {
     let resultado = "";
     let mensajeFinal = "";
     for (let i = 0; i < text.length; i++) {
@@ -13,7 +13,7 @@ window.cipher = {
     return mensajeFinal;
   },
   //ahora el 2do metodo de el Objeto cipher
-  decode: function (offset, text) {
+  decode: (offset, text) => {
     let resultado = "";
     let mensajeFinal = "";
     for (let i = 0; i < text.length; i++) {
